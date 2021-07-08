@@ -14,7 +14,7 @@ namespace PokemonAPI.Controllers
     [ApiController]
     public class PokemonAPI : ControllerBase
     {
-        [HttpPost("GetPokemon")]
+        [HttpGet("GetPokemon")]
         public async Task<IActionResult> GetPokemon(int id)
         {
             Pokemon pokemon = await Pokeapi.GetDataAsync(id);
