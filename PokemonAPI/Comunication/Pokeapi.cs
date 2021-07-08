@@ -1,6 +1,7 @@
 ﻿using HttpRequestHelper.Control;
 using Newtonsoft.Json;
 using PokemonAPI.Model;
+using PokemonAPI.Model.ApiModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;

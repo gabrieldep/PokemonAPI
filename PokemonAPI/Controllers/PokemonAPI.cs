@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using PokemonAPI.Comunication;
 using PokemonAPI.Model;
+using PokemonAPI.Model.ApiModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
