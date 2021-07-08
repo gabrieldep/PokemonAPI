@@ -18,7 +18,6 @@ namespace PokemonAPI.Controllers
         public async Task<IActionResult> GetPokemon(int id)
         {
             Pokemon pokemon = await Pokeapi.GetDataAsync(id);
-
             return StatusCode((int)HttpStatusCode.OK, pokemon);
         }
     }
