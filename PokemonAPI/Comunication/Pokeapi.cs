@@ -11,6 +11,7 @@ namespace PokemonAPI.Comunication
 {
     public class Pokeapi
     {
-        public static async Task<Pokemon> GetDataAsync(int id) => await RequestControl.GetAsync<Pokemon>("https://pokeapi.co/api/v2/pokemon/" + id);
+        public static async Task<Pokemon> GetPokemonDataByIdAsync(int id) => await RequestControl.GetAsync<Pokemon>("https://pokeapi.co/api/v2/pokemon/" + id);
+        public static async Task<Pokemon> GetPokemonDataByNameAsync(string name) => await RequestControl.GetAsync<Pokemon>("https://pokeapi.co/api/v2/pokemon/" + name);
     }
 }
