@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PokemonAPI.Model
+namespace PokemonAPI.Model.ApiModels
 {
     public class Types
     {

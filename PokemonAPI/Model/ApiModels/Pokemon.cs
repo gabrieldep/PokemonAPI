@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PokemonAPI.Model
+namespace PokemonAPI.Model.ApiModels
 {
     public class Pokemon
     {
@@ -16,6 +16,8 @@ namespace PokemonAPI.Model
         public int Height { get; set; }
         [JsonProperty("weight")]
         public int Weight { get; set; }
+        [JsonProperty("sprites")]
+        public Sprites Sprites { get; set; }
 
 
         [JsonProperty("types")]
