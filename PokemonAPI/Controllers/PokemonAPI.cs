@@ -14,6 +14,12 @@ namespace PokemonAPI.Controllers
     [ApiController]
     public class PokemonAPI : ControllerBase
     {
+        /// <summary>
+        /// Faz uma requisição e monta um pokemon
+        /// </summary>
+        /// <returns>IAction result com o Pokemon caso dê certo.</returns>
+        /// <param name="name">Pokemon name.</param>
+        /// <param name="id">Pokemon id.</param>
         [HttpGet("GetPokemon")]
         public async Task<IActionResult> GetPokemon(int? id, string name)
         {
@@ -22,7 +28,7 @@ namespace PokemonAPI.Controllers
             {
                 pokemon = await Pokeapi.GetPokemonDataByIdAsync(id.Value);
             }
-            else if(!string.IsNullOrEmpty(name))
+            else if (!string.IsNullOrEmpty(name))
             {
                 pokemon = await Pokeapi.GetPokemonDataByNameAsync(name);
             }
