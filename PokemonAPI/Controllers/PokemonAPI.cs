@@ -37,8 +37,14 @@ namespace PokemonAPI.Controllers
             {
                 return StatusCode((int)HttpStatusCode.NoContent);
             }
-
-            return StatusCode((int)HttpStatusCode.OK, pokemon);
+            PokemonDTO dto = new PokemonDTO
+            {
+                Id = pokemon.Id,
+                Image = pokemon.Sprites.FrontDefault,
+                Name = pokemon.Name,
+                Types = pokemon.Types.Select(t => t.Type.Name)
+            };
+            return StatusCode((int)HttpStatusCode.OK, dto);
         }
     }
 }
